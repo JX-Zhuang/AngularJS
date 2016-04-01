@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS进阶</title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body ng-app="app">
+	<div ng-controller="MyCtrl">
+		<input type="text" ng-model='msg'>
+		<h1>{{msg}}</h1>
+	</div>
+	<input type="text" ng-model='username'>
+	<h1>用户名：{{username}}</h1>
+	<h1 ng-bind="'用户名：'+username"></h1>
+	<div class="{{username}}">{{username}}</div>	
+</body>
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript">
+	angular.module('app',[])
+	.controller('MyCtrl',function($scope){
+		$scope.msg='hello AngularJS';
+	});
+</script>
+</html>
