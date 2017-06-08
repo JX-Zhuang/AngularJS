@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="c1">
+$http：angular里的XMLHttpRequest
+<ul>
+    <li ng-repeat="d in data">
+        Country:{{d.Country}}
+        <br>
+        Name:{{d.Name}}
+        <br>
+        Url:{{d.Url}}
+    </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-app="myApp">
+service是对象或函数，在angular里可以直接使用，作为参数传递给controller的回调函数里。
+分为内置service和自定义service
+<div ng-controller="c1">
+    firstname:<input type="text" ng-model="firstName">
+    lastname:<input type="text" ng-model="lastName">
+    <div>firstname:{{firstName}}</div>
+    <div>lastname:{{lastName}}</div>
+    <div>fullname:{{fullName}}</div>
+</div>
+
+</body>
+</html>

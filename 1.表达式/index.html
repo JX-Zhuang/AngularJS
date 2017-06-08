@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../angular.min.js"></script>
+</head>
+<body ng-app="" ng-init="a=10;b=20">
+<div>
+    表达式：{{"{{a+b}\}"}}，双大括号包裹，ng-init：初始化表达式的值
+    {{a+b}}
+</div>
+<div>
+    ng-bind：标签内容替换成bind的表达式的值
+</div>
+<div ng-bind="a+b">
+</div>
+</body>
+</html>

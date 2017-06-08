@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="c1">
+ng-options与ng-repeat
+<br>
+ng-repeat:有局限性，用ng-repeat，ng-model绑定的数据是字符串，即为option的value
+<br>
+ng-options:ng-model绑定是一个对象
+<select ng-model="s1">
+    <option ng-repeat="s in sites" value="{{s.url}}">{{$index}}{{s.site}}</option>
+</select>
+<h2>选中的是：{{s1}}</h2>
+<select ng-model="s2" ng-options="s.site for s in sites" value="{{s.url}}"></select>
+<h2>选中的是：{{s2.url}}   {{s2.site}}</h2>
+</body>
+</html>

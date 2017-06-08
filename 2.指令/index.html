@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../angular.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+<body ng-app="myApp">
+<div>
+    指令：ng-
+    <ol>
+        <li>ng-app：定义angular应用</li>
+        <li>ng-init：初始化数据</li>
+        <li>ng-repeat：循环数据</li>
+        <li>ng-model：绑定数据</li>
+        <li>自定义指令：
+            定义指令，设置调用方法
+            <my-directive></my-directive>
+            <div my-directive></div>
+            <div class="my-directive"></div>
+        </li>
+    </ol>
+</div>
+<ul ng-init="arr=[1,2,3,4]">
+    <li ng-repeat="a in arr">
+        {{a}}
+    </li>
+</ul>
+<input type="text" ng-model="arr[1]">
+<span>{{arr[1]}}</span>
+</body>
+</html>

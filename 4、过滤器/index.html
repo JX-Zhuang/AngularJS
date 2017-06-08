@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="c">
+<div>
+    内置过滤器，自定义过滤器
+    <ol>
+        <li ng-repeat="item in pipe">
+            {{item.name}}
+            {{item.value | myFilter:item.fun }}
+        </li>
+    </ol>
+</div>
+</body>
+</html>

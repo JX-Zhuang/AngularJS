@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="c1">
+{{name}} {{$$childHead.name}} {{$$childTail.name}}
+    <div ng-controller="c11">
+        {{$parent.name}}
+        <input type="text" ng-model="$parent.name">
+    </div>
+</div>
+<div ng-controller="c2">
+    {{name}}
+    <input type="text" ng-model="name">
+</div>
+<div ng-controller="c3">
+    <form action="" name="myForm">
+
+    </form>
+</div>
+</body>
+</html>
